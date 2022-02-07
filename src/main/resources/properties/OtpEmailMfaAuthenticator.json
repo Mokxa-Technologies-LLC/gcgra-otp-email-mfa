@@ -1,0 +1,40 @@
+[
+   {
+      "title":"@@otpEmail.config@@",
+      "properties":[
+         {
+            "name":"validity",
+            "label":"@@otpEmail.validity@@",
+            "type":"textfield",
+            "description":"@@otpEmail.validity.desc@@",
+            "required":"True",
+            "value":"5"
+         },
+         {
+            "name":"subject",
+            "label":"@@otpEmail.subject@@",
+            "type":"textfield",
+            "value":"@@otpEmail.subject.sample@@"
+         },
+         {
+            "name":"message",
+            "label":"@@otpEmail.message@@",
+            "type":"textarea",
+            "cols":"60",
+            "rows":"15",
+            "value" : "@@otpEmail.message.sample@@"
+         },
+         {
+            "name":"isHtml",
+            "label":"@@otpEmail.isHtml@@",
+            "type":"checkbox",
+            "options":[
+               {
+                  "value":"true",
+                  "label":""
+               }
+            ]
+         }
+      ]
+   }
+]
