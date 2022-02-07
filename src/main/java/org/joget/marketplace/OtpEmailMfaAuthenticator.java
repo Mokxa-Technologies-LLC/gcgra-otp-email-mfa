@@ -147,7 +147,7 @@ public class OtpEmailMfaAuthenticator extends MfaAuthenticator implements Plugin
         UserMetaData umOTP = new UserMetaData();
         umOTP.setUsername(username);
         umOTP.setKey(OTP_KEY);
-        umOTP.setValue(pin);
+        umOTP.setValue(StringUtil.md5(pin));
         
         dao.addUserMetaData(umOTP);
         
