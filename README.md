@@ -1,6 +1,6 @@
 # Description
 
-This repository is meant to serve as a general template for how to set up new repositories in the JogetOSS organization. 
+OTP Email MFA is a Multi-factor authentication plugin that sends a one-time password to user's email providing additional layer of security.
 
 # Getting Help
 
