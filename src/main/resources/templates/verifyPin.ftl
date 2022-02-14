@@ -1,3 +1,20 @@
+<style>
+    body {
+        margin-top: 0 !important;
+    }
+    div#main-body-header {
+        display: block;
+        background: #464646;
+        font-size: 18px;
+        color: white;
+        padding: 8px;
+        margin: 0;
+    }
+    div#main-body-content{
+        margin: 16px 8px 0;
+    }
+</style>
+
 <#if updated! == "true">
     <script>
         parent.window.location = '${redirectUrl!}';

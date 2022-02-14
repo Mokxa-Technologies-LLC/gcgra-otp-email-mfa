@@ -1,6 +1,7 @@
 package org.joget.marketplace;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
 import java.util.HashMap;
@@ -40,7 +41,7 @@ public class OtpEmailMfaAuthenticator extends MfaAuthenticator implements Plugin
 
     @Override
     public String getVersion() {
-        return "7.0.0";
+        return "7.0.1";
     }
 
     @Override
@@ -118,8 +119,19 @@ public class OtpEmailMfaAuthenticator extends MfaAuthenticator implements Plugin
         }
         
         if (content != null && !content.isEmpty()) {
-            request.setAttribute("content", content);
-            request.getRequestDispatcher("/WEB-INF/jsp/console/popupTemplate.jsp").forward(request, response);
+            String css = AppUtil.getUserviewThemeCss();
+            String contextPath = request.getContextPath();
+            
+            if(css.isEmpty()){
+                css = "<link rel=\"stylesheet\" type=\"text/css\" href=\"" + contextPath + "/css/v7.css\"/>";
+                css+= "<link rel=\"stylesheet\" type=\"text/css\" href=\"" + contextPath + "/css/console_custom.css\"/>";
+            }
+            
+            content = css + content;
+            
+            response.setContentType("text/html");
+            PrintWriter writer = response.getWriter();
+            writer.write(content);
         } else {
             response.setStatus(HttpServletResponse.SC_NO_CONTENT);
         }
