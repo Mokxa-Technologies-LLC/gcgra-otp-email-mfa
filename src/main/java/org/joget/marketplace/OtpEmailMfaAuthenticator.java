@@ -41,7 +41,7 @@ public class OtpEmailMfaAuthenticator extends MfaAuthenticator implements Plugin
 
     @Override
     public String getVersion() {
-        return "7.0.1";
+        return "7.0.2";
     }
 
     @Override

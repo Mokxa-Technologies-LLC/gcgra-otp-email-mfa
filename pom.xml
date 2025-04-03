@@ -4,7 +4,7 @@
     <groupId>org.joget.marketplace</groupId>
     <artifactId>otp-email-mfa</artifactId>
     <packaging>bundle</packaging>
-    <version>7.0.1</version>
+    <version>7.0.2</version>
     <name>otp-email-mfa</name>
     <url>http://www.joget.org</url>
     <build>
@@ -82,7 +82,7 @@
         <dependency>
             <groupId>commons-codec</groupId>
             <artifactId>commons-codec</artifactId>
-            <version>1.5</version>
+            <version>1.17.1</version>
         </dependency>
         <dependency>
             <groupId>javax.servlet</groupId>
